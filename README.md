@@ -1,8 +1,8 @@
 # casus-transcriptomics
-Inleiding
+# Inleiding
 
-Methode
+# Methode
 
-Resultaten
+# Resultaten
 
-Conclusie
+# Conclusie
