@@ -1,4 +1,4 @@
-# Casus-transcriptomics
+# Reumatoïde Artritis RNA-sequencing
 ![RNA_voorpagina](https://github.com/user-attachments/assets/bda86f52-cd6e-46ee-9467-8bb311f4d4af)
 
 # Inleiding
