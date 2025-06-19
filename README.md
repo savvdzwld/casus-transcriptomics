@@ -4,6 +4,9 @@
 
 # Inleiding
 Reumatoïde artritis(RA) staat bekend als een chronische inflammatoire  multisystemische auto-immuunziekte, het afweersysteem keert tegen het lichaam. Normaliter breekt en voert ziekteverwekkers af met dit afweer systeem, beschermt het lichaam. De onderliggende oorzaak is onbekend, echter een deel van de meespelende factoren wel. Tumornecrosefactor (TNF-α)  en interleukine 6(IL-6) zijn cytokines(onderdeel van het immuunsysteem) wat zorgt voor de communicatie tussen de cellen. (https://pubmed.ncbi.nlm.nih.gov/39894627/) TNF-α en IL-6 onder houden gewrichten en* treden op  wanneer er sprake is van ontsteking door RA.(https://pubmed.ncbi.nlm.nih.gov/30098882/) Bij RA  verstijven en zwellen de gewrichten op wat kan leidden tot leidt ontstekingen. hierdoor ontstaan pijnklachten en mettertijd kunnen de botten en het kraakbeen beschadigen. ((https://pubmed.ncbi.nlm.nih.gov/39894627/) Vroege diagnose voorkomt lange termijn klachten. (https://pubmed.ncbi.nlm.nih.gov/37567824/). Met gebruik van RNA-sequencing kan data worden vergeleken met klachten en ziektemechanismen voor een vroege diagnose. Het onderzoek omvat data van een eerder uitgevoerd onderzoek(Platzer et al., 2019). De 8 sampels van het weefsel van het gewrichtsslijmvlies, waaronder 4 gezonde patiënten en 4 samples van patiënten met vastgestelde RA van minimaal 12 maanden. 
+
+# Inhoud
+hier komt nog een inhoudsopgave
 # Methode
 ![Flowchart transcriptomics](https://github.com/user-attachments/assets/78a4b920-9831-4a8c-9164-b5b19c814288)
 
