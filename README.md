@@ -40,7 +40,7 @@ Met een vulkaanplot wordt gevisualiseerd hoeveel de genexpressie van specifieke 
 Hierin is in één oogopslag het verband te zien hoevaak deze genen worden gedecteerd als DE met een groene trendlijn. Met op de x-as eigenschappen van de genen gebundeld in bins van 300, en op de y-as het aantal differentieel geëxprimeerde genen per bin. 
 Het is van belang om de significante functies worden onderzocht, deze informatie kan bepaald worden met een GO-analyse.
 
-![Go-analyse](https://github.com/savvdzwld/casus-transcriptomics/blob/main/resultaten/go-analyse.png)
+![Go-analyse](https://github.com/savvdzwld/casus-transcriptomics/blob/main/Resultaten/go-analyse.png)
 
 *Figuur 4: GO-analyse, hogere x-as waarde betekent meer gekoppelde genen uit de eigen data-set(lijst) dus specifiek voor mijn data, aan deze functie. grootte van de stip houdt in hoeveel genen van het hele genoom in deze biologisceh processen zijn betrokken* 
 
