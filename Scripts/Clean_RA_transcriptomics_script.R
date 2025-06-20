@@ -6,7 +6,6 @@ browseVignettes('Rsubread')
 buildindex(basename = 'ref_human', reference = 'Homo_sapiens.GRCh38.dna.toplevel.fa.gz', memory = 4000, indexSplit = TRUE)
 align.RA1 <- align(index = "ref_human", readfile1 = "Data_RA_raw/SRR4785819_1_subset40k.fastq", readfile2= "Data_RA_raw/SRR4785819_2_subset40k.fastq", output_file = "human_SRR4785819.BAM")
 align.RA4 <- align(index = "ref_human", readfile1 = "Data_RA_raw/SRR4785828_1_subset40k.fastq", readfile2= "Data_RA_raw/SRR4785828_2_subset40k.fastq", output_file = "human_SRR4785828.BAM")
-# de hieropvolgende had ik voor de 4 gedaan, waardoor er dus geen 2 is
 align.RA3 <- align(index = "ref_human", readfile1 = "Data_RA_raw/SRR4785820_1_subset40k.fastq", readfile2= "Data_RA_raw/SRR4785820_2_subset40k.fastq", output_file = "human_SRR4785820.BAM")
 align.RA5 <- align(index = "ref_human", readfile1 = "Data_RA_raw/SRR4785831_1_subset40k.fastq", readfile2= "Data_RA_raw/SRR4785831_2_subset40k.fastq", output_file = "human_SRR4785831.BAM")
 align.RA6<- align(index = "ref_human", readfile1 = "Data_RA_raw/SRR4785979_1_subset40k.fastq", readfile2= "Data_RA_raw/SRR4785979_2_subset40k.fastq", output_file = "human_SRR4785979.BAM")
@@ -17,66 +16,36 @@ library(Rsamtools)
 samples <- c('human_SRR4785819', 'human_SRR4785828', 'human_SRR4785820', 'human_SRR4785831', 'human_SRR4785979', 'human_SRR4785980', 'human_SRR4785986', 'human_SRR4785988')
 lapply(samples, function(s) {sortBam(file = paste0(s, '.BAM'), destination = paste0(s, '.sorted'))})
 lapply(samples, function(s) {indexBam(file = paste0(s, '.sorted.bam'))})
-#werkcollege 2
 library(readr)
 library(dplyr)
 library(Rsamtools)
 library(Rsubread)
-# Je definieert een vector met namen van BAM-bestanden. Elke BAM bevat reads van een RNA-seq-experiment (bijv. behandeld vs. controle).
-
 allsamples <- c("human_SRR4785819.BAM", "human_SRR4785828.BAM", "human_SRR4785820.BAM", "human_SRR4785831.BAM", "human_SRR4785979.BAM", "human_SRR4785980.BAM", "human_SRR4785986.BAM", "human_SRR4785988.BAM")
-
 count_matrix <- featureCounts(files = allsamples, annot.ext = "Homo_sapiens.GRCh38.114.gtf",isPairedEnd = TRUE, isGTFAnnotationFile = TRUE,GTF.attrType = "gene_id",useMetaFeatures = TRUE)
 head(count_matrix$annotation)
 head(count_matrix$counts)
-# Bekijk eerst de structuur van het object
 str(count_matrix)
-# Haal alleen de matrix met tellingen eruit
 counts <- count_matrix$counts
 colnames(counts) <- c( "SRR4785819", "SRR4785828", "SRR4785820","SRR4785831", "SRR4785979", "SRR4785980", "SRR4785986", "SRR4785988")
 rownames(counts) <- counts[, 1]
 write.csv(counts, "bewerkt_countmatrix.csv")
 head(counts)
-#werkcollege 3
 counts <- read.table("count_matrix.txt", row.names = 1)
 treatment <- c("SRR4785819", "SRR4785828", "SRR4785820", "SRR4785831", "SRR4785979", "SRR4785980", "SRR4785986", "SRR4785988")
 group <- c("Reuma","Reuma","Reuma","Reuma", "Neutraal", "Neutraal", "Neutraal", "Neutraal")
-treatment <- c("SRR4785819", "SRR4785828", "SRR4785820", "SRR4785831","SRR4785979", "SRR4785980", "SRR4785986", "SRR4785988")
-
-
-
-
 treatment_table <- data.frame(treatment, group) 
 rownames(treatment_table) <- c('SRR4785819', 'SRR4785828', 'SRR4785820', 'SRR4785831', 'SRR4785979', 'SRR4785980', 'SRR4785986', 'SRR4785988')
 treatment_table
 treatment
-
 BiocManager :: install('DESeq2')
 BiocManager :: install('KEGGREST')
 library(DESeq2)
 library(KEGGREST)
-# Verwijder gen-id uit de eerste kolom (indien aanwezig)
-if (!is.numeric(counts[,1])) {
-  rownames(counts) <- counts[,1]
-  counts <- counts[, -1]
-}
-
-
-# Maak DESeqDataSet aan
-# deed het niet(die met treatment)
-dds <- DESeqDataSetFromMatrix(countData = round(counts), colData = treatment_table, design = ~ treatment)
-#aanpassing
 dds <- DESeqDataSetFromMatrix(countData = round(counts), colData = treatment_table, design = ~ group)
 counts
-
-
-# Voer analyse uit
 dds <- DESeq(dds)
 resultaten <- results(dds)
 resultaten
-# Resultaten opslaan in een bestand
-#Bij het opslaan van je tabel kan je opnieuw je pad instellen met `setwd()` of het gehele pad waar je de tabel wilt opslaan opgeven in de code.
-
 write.table(resultaten, file = 'ResultatenCasusWC3.csv', row.names = TRUE, col.names = TRUE)
 sum(resultaten$padj < 0.05 & resultaten$log2FoldChange > 1, na.rm = TRUE)
 sum(resultaten$padj < 0.05 & resultaten$log2FoldChange < -1, na.rm = TRUE)
@@ -84,18 +53,10 @@ hoogste_fold_change <- resultaten[order(resultaten$log2FoldChange, decreasing = 
 laagste_fold_change <- resultaten[order(resultaten$log2FoldChange, decreasing = FALSE), ]
 laagste_p_waarde <- resultaten[order(resultaten$padj, decreasing = FALSE), ]
 head(laagste_p_waarde)
-
 if (!requireNamespace("EnhancedVolcano", quietly = TRUE)) {BiocManager::install("EnhancedVolcano")}
 library(EnhancedVolcano)
-
-EnhancedVolcano(resultaten, lab = rownames(resultaten), x = 'log2FoldChange',y = 'padj')
 EnhancedVolcano(resultaten, lab = rownames(resultaten), x = 'log2FoldChange',y = 'padj', col= c('palevioletred2', 'palegreen3', 'royalblue3', 'palegoldenrod'))
-# Alternatieve plot zonder p-waarde cutoff (alle genen zichtbaar)
-EnhancedVolcano(resultaten,
-                lab = rownames(resultaten),
-                x = 'log2FoldChange',
-                y = 'padj',
-                col=c('palevioletred2', 'royalblue2', 'palegoldenrod', 'palegreen3', pCutoff = 0))
+EnhancedVolcano(resultaten, lab = rownames(resultaten), x = 'log2FoldChange', y = 'padj', col=c('palevioletred2', 'royalblue2', 'palegoldenrod', 'palegreen3', pCutoff = 0))
 BiocManager::install('goseq')
 BiocManager::install('geneLenDataBase')
 BiocManager::install('org.Dm.eg.db')
@@ -104,94 +65,46 @@ library(goseq)
 library(geneLenDataBase)
 library(org.Dm.eg.db)
 library(dplyr)
-
-significante_genen <- resultaten %>%
-  as.data.frame() %>%
-  filter(padj < 0.05 & abs(log2FoldChange) > 1)
-upregulated <- resultaten %>%
-  as.data.frame() %>%
-  filter(padj < 0.05 & log2FoldChange > 1)
-downregulated <- resultaten %>%
-  as.data.frame() %>%
-  filter(padj < 0.05 & log2FoldChange < -1)
-niet_significant <- resultaten %>%
-  as.data.frame() %>%
-  filter(is.na(padj) | padj >= 0.05)
-
-# 1. Resultaten uit DESeq2
+significante_genen <- resultaten %>% as.data.frame() %>% filter(padj < 0.05 & abs(log2FoldChange) > 1)
+upregulated <- resultaten %>% as.data.frame() %>% filter(padj < 0.05 & log2FoldChange > 1)
+downregulated <- resultaten %>% as.data.frame() %>% filter(padj < 0.05 & log2FoldChange < -1)
+niet_significant <- resultaten %>% as.data.frame() %>% filter(is.na(padj) | padj >= 0.05)
 resultaten <- results(dds)
-
-# 2. Omzetten naar data frame
 resultaten_df <- as.data.frame(resultaten)
-
-# 3. Voeg eventueel een gen-identifier toe als kolom
 resultaten_df$gene <- rownames(resultaten_df)
-
-
-all <- rownames(resultaten_df)
 GOI <- rownames(significante_genen)
-
-
-
-# 4. Opslaan naar CSV zonder filtering
 write.csv(resultaten_df, file = "alle_genen_resultaten.csv", row.names = FALSE)
 write.csv(significante_genen, "significante_genen.csv")
 write.csv(niet_significant, "niet_significante_genen.csv")
-
 DEG<-read.csv("significante_genen.csv", header = TRUE)
-#klopt deze wel ivm hoofdletters als naam
 ALL<-read.csv("alle_genen_resultaten.csv", header = TRUE)
 class(DEG)
 DEG.vector <- DEG$X
 ALL.vector<- ALL$gene
-#all of ALL?
 gene.vector=as.integer(ALL%in%GOI)
 names(gene.vector)=ALL
-gene.vector=as.integer(all%in%GOI)
-names(gene.vector)=all
-#lets explore this new vector a bit
 head(gene.vector)
 tail(gene.vector)
-
-supportedOrganisms()
-
-
 pwf=nullp(gene.vector,"hg19","geneSymbol")
-
 BiocManager::install("org.Hs.eg.db")
 library(org.Hs.eg.db)
 library(goseq)
 BiocManager::install('goseq')
-
 GO.wall=goseq(pwf,"hg19","geneSymbol")
-# chatgpt error
 BiocManager::install("org.Hs.eg.db")  
 library(org.Hs.eg.db)                
 library(ggplot2)
-#How many enriched GO terms do we have
 class(GO.wall)
 head(GO.wall)
 nrow(GO.wall)
 enriched.GO=GO.wall$category[GO.wall$over_represented_pvalue<.05]
-BiocManager
-BiocManager::install()
-library(GO.db)
 BiocManager::install("tidyverse")
 library(tidyverse)
 library(dplyr)
 capture.output(for(go in enriched.GO[1:258]) { print(head[[go]])
   cat("--------------------------------------\n")}, file="SigGo.txt")
 
-GO.wall %>% 
-  top_n(10, wt=-over_represented_pvalue) %>% 
-  mutate(hitsPerc=numDEInCat*100/numInCat) %>% 
-  ggplot(aes(x=hitsPerc, 
-             y=term, 
-             colour=over_represented_pvalue, 
-             size=numDEInCat)) +
-  geom_point() +
-  expand_limits(x=0) +
-  labs(x="Genen", y="Functie", colour="p value", size="Count")+ scale_colour_gradient(low = "palevioletred2", high = 'royalblue2')
+GO.wall %>% top_n(10, wt=-over_represented_pvalue) %>% mutate(hitsPerc=numDEInCat*100/numInCat) %>% ggplot(aes(x=hitsPerc, y=term, colour=over_represented_pvalue, size=numDEInCat)) + geom_point() + expand_limits(x=0) +labs(x="Genen", y="Functie", colour="p value", size="Count")+ scale_colour_gradient(low = "palevioletred2", high = 'royalblue2')
 BiocManager::install("pathview")
 library(pathview)
 resultaten[1] <- NULL
