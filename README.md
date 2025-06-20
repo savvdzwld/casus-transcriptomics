@@ -42,7 +42,7 @@ Het is van belang om de significante functies worden onderzocht, deze informatie
 
 ![Go-analyse](https://github.com/savvdzwld/casus-transcriptomics/blob/main/resultaten/go-analyse.png)
 
-*Figuur 4: GO-analyse* 
+*Figuur 4: GO-analyse, hogere x-as waarde betekent meer gekoppelde genen uit de eigen data-set(lijst) dus specifiek voor mijn data, aan deze functie. grootte van de stip houdt in hoeveel genen van het hele genoom in deze biologisceh processen zijn betrokken* 
 
 Deze dotplot is een vorm van een go-analyse. Op de y-as staan de biologische functies en op de x-as de hoeveelheid genen die geassocieerd zijn met deze functie, hoe groter een punt, hoe meer genen er bijdragen aan deze functie. De kleur van deze punten toont de significantie. Er is te zien welke biologische functies verrijkt zijn in een set van genen. Door te weten welke invloed de functie antigen binding heeft kan er diagnose gesteld worden, en kan deze informatie worden gebruikt in nader onderzoek. 
 
@@ -53,7 +53,4 @@ Deze dotplot is een vorm van een go-analyse. Op de y-as staan de biologische fun
 Het proces en de presentatie van deze functie is te visualiseren met een KEGG-analyse. Antigen binding wijst op het immuunsysteem, waaronder MHC klasse 1 en 2 vallen. In deze pathview (figuur 5) is te zien dat bij gezonde patiënten MHCI, PA28 en HSP70/90, in tegenstelling tot MHCII en IFNƴ , een hogere expressie tonen dan patiënten met RA.*Specifiek de T-cell receptoren(TCR) zijn afhankelijk van de antigen binding receptoren.*
 
 # Conclusie
-In de [Vulkaanplot](https://github.com/savvdzwld/casus-transcriptomics/blob/main/resultaten/Vulkaanplot.png) is te zien dat ANKRD30BL een van e significant veranderde genen is, kijkende naar het verschil tussen het humane genoom en de RA patiënten data. Bij de [Bias-analyse](https://github.com/savvdzwld/casus-transcriptomics/blob/main/resultaten/pwf.png) is te zien dat de data mogelijk biased is.
- Wanneer de kans op detectie als DE toeneemt.
- Interpretatie:
-•	Als de kans op detectie als DE toeneemt met bijvoorbeeld hogere expressie, dan is je data biased en moet je dat mogelijk corrigeren in downstream analyses zoals gene set enrichment.
+In de [Vulkaanplot](https://github.com/savvdzwld/casus-transcriptomics/blob/main/resultaten/Vulkaanplot.png) is te zien dat ANKRD30BL een van de significant veranderde genen is, kijkende naar het verschil tussen het humane genoom en de RA patiënten data. Bij de [Bias-analyse](https://github.com/savvdzwld/casus-transcriptomics/blob/main/resultaten/pwf.png) is te zien dat de data biased is, aangezien de detectie als DE is toegenomen.*wat betekent dit dan, wat gebeurt er als de data biased is* Na het corrigeren van deze data is in de [go-analyse](https://github.com/savvdzwld/casus-transcriptomics/blob/main/resultaten/go-analyse.png) geconstateerd dat het aantal gekoppelde genen aan het antigen binding proces significant verschilt bij RA-patiënten. 
