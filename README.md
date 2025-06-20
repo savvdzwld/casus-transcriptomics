@@ -48,7 +48,7 @@ Deze dotplot is een vorm van een go-analyse. Op de y-as staan de biologische fun
 
 ![KEGG-analyse](https://github.com/savvdzwld/casus-transcriptomics/blob/main/resultaten/hsa04612.pathview.png)
 
-*Figuur 5: KEGG-analyse* 
+*Figuur 5: KEGG-analyse, waarbij controle tov RA* 
 
 Het proces en de presentatie van deze functie is te visualiseren met een KEGG-analyse. Antigen binding wijst op het immuunsysteem, waaronder MHC klasse 1 en 2 vallen. *Specifiek de T-cell receptoren(TCR) zijn afhankelijk van de antigen binding receptoren.*
 
