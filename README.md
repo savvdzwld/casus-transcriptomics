@@ -3,14 +3,14 @@
 ![RNA_sequencing_voorpagina](https://github.com/user-attachments/assets/23f3beed-82b0-4c4d-8ba2-09fd2fb2538e)
 
 # Inhoud
-data/raw/- dataset van reumapatiënten
-data/processed- verwerkte data van deze dataset
-scripts/- het gebruikte script om de data te verwerken
-resultaten/- de grafieken en figuren van de verwerkte data set, gevisualiseerde resultaten
-bronnen/- de gebruikte bronnen met het literatuuronderzoek, voor de achtergrondinformatie
-README.md- de geschreven informatie van dit onderzoek
-assets/- de bronnen van de niet zelf-gegenereerde gebruikte plaatjes in het readme file 
-data_stewardship/- toepassing en gebruik van de github pagina voor de data-steward
+- [data/raw/- dataset van reumapatiënten]
+- [data/processed- verwerkte data van deze dataset]
+- [scripts/- het gebruikte script om de data te verwerken]
+- [resultaten/- de grafieken en figuren van de verwerkte data set, gevisualiseerde resultaten]
+- [bronnen/- de gebruikte bronnen met het literatuuronderzoek, voor de achtergrondinformatie]
+- [README.md- de geschreven informatie van dit onderzoek]
+- [assets/- de bronnen van de niet zelf-gegenereerde gebruikte plaatjes in het readme file] 
+- [data_stewardship/- toepassing en gebruik van de github pagina voor de data-steward]
 
 # Inleiding
 Reumatoïde artritis(RA) staat bekend als een chronische inflammatoire  multisystemische auto-immuunziekte, het afweersysteem keert tegen het lichaam. Normaliter breekt en voert ziekteverwekkers af met dit afweer systeem, beschermt het lichaam. De onderliggende oorzaak is onbekend, echter een deel van de meespelende factoren wel. Tumornecrosefactor (TNF-α)  en interleukine 6(IL-6) zijn cytokines(onderdeel van het immuunsysteem) wat zorgt voor de communicatie tussen de cellen. (https://pubmed.ncbi.nlm.nih.gov/39894627/) TNF-α en IL-6 onder houden gewrichten en* treden op  wanneer er sprake is van ontsteking door RA.[(Bron)](https://github.com/savvdzwld/casus-transcriptomics/blob/main/bronnen/Reumatologia-Clinica.pdf) Bij RA  verstijven en zwellen de gewrichten op wat kan leidden tot ontstekingen. hierdoor ontstaan pijnklachten en mettertijd kunnen de botten en het kraakbeen beschadigen. () *behandeling/diagnose informatie* Vroege diagnose voorkomt lange termijn klachten. (https://pubmed.ncbi.nlm.nih.gov/37567824/). Met gebruik van RNA-sequencing kan data worden vergeleken met klachten en ziektemechanismen voor een vroege diagnose. Het onderzoek omvat data van een eerder uitgevoerd onderzoek(Platzer et al., 2019). De 8 sampels van het weefsel van het gewrichtsslijmvlies, waaronder 4 gezonde patiënten en 4 samples van patiënten met vastgestelde RA van minimaal 12 maanden. 
