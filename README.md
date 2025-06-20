@@ -29,6 +29,7 @@ Om een diagnose te stellen zijn resultaten vereist, doormiddel van visualisatie 
 
 Met een vulkaanplot wordt gevisualiseerd hoeveel de genexpressie van specifieke genen significant verandert. Op de x-as de mate van verandering in expressie, en op de y-as de significantie van deze verandering. Hoe hoger de waarde,blauw gekleurd, des te significanter. ANKRD30BL in het groen is een van  de significante genen met veranderingen van beide, deze functies kunnen samenhangen. Van deze samenhang is een bias-analyse uitgevoerd in differentieel geëxprimeerd(DE) data.
 ![Bias-analyse](https://github.com/savvdzwld/casus-transcriptomics/blob/main/resultaten/pwf.png)
+
 *Figuur 2: Bias-analyse* 
 
 Hierin is in één oogopslag het verband te zien hoevaak deze genen worden gedecteerd als DE met een groene trendlijn. Met op de x-as eigenschappen van de genen gebundeld in bins van 300, en op de y-as het aantal differentieel geëxprimeerde genen per bin. 
