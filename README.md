@@ -1,4 +1,4 @@
-# Reumatoïde Artritis Transcriptomics
+# Reumatoïde Artritis is vroeg aan te tonen op basis van veranderde antigeenbinding met gebruik van Transcriptomics
 
 ![RNA_sequencing_voorpagina](https://github.com/user-attachments/assets/23f3beed-82b0-4c4d-8ba2-09fd2fb2538e)
 
