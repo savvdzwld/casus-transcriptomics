@@ -3,7 +3,7 @@
 ![RNA_sequencing_voorpagina](https://github.com/user-attachments/assets/23f3beed-82b0-4c4d-8ba2-09fd2fb2538e)
 
 # Inhoud
-- [data/raw/](https://github.com/savvdzwld/casus-transcriptomics/tree/main/Data/Raw)- dataset van reumapatiënten
+- ["data/raw/"](https://github.com/savvdzwld/casus-transcriptomics/tree/main/Data/Raw)- dataset van reumapatiënten
 - [data/processed]()- verwerkte data van deze dataset
 - [scripts/- het gebruikte script om de data te verwerken]
 - [resultaten/- de grafieken en figuren van de verwerkte data set, gevisualiseerde resultaten]
