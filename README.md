@@ -3,13 +3,13 @@
 ![RNA_sequencing_voorpagina](https://github.com/user-attachments/assets/23f3beed-82b0-4c4d-8ba2-09fd2fb2538e)
 
 # Inhoud
-- `assets/`- de bronnen van de niet zelf-gegenereerde gebruikte plaatjes in het readme file
-- `data/raw/`- dataset van reumapatiënten
-- `data/processed`- verwerkte data van deze dataset
-- `data_stewardship`- toepassing en gebruik van de github pagina voor de data-steward
-- `scripts/`- het gebruikte script om de data te verwerken
-- `bronnen/`- de gebruikte bronnen met het literatuuronderzoek, voor de achtergrondinformatie
-- `resultaten/`- de grafieken en figuren van de verwerkte data set, gevisualiseerde resultaten
+- `Assets/`- de bronnen van de niet zelf-gegenereerde gebruikte plaatjes in het readme file
+- `Data/raw/`- dataset van reumapatiënten
+- `Data/processed`- verwerkte data van deze dataset
+- `Data_stewardship`- toepassing en gebruik van de github pagina voor de data-steward
+- `Scripts/`- het gebruikte script om de data te verwerken
+- `Bronnen/`- de gebruikte bronnen met het literatuuronderzoek, voor de achtergrondinformatie
+- `Resultaten/`- de grafieken en figuren van de verwerkte data set, gevisualiseerde resultaten
 - `README.md`- de geschreven informatie van dit onderzoek
 
 
