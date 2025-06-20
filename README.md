@@ -50,7 +50,7 @@ Deze dotplot is een vorm van een go-analyse. Op de y-as staan de biologische fun
 
 *Figuur 5: KEGG-analyse, waarbij controle tov RA* 
 
-Het proces en de presentatie van deze functie is te visualiseren met een KEGG-analyse. Antigen binding wijst op het immuunsysteem, waaronder MHC klasse 1 en 2 vallen. *Specifiek de T-cell receptoren(TCR) zijn afhankelijk van de antigen binding receptoren.*
+Het proces en de presentatie van deze functie is te visualiseren met een KEGG-analyse. Antigen binding wijst op het immuunsysteem, waaronder MHC klasse 1 en 2 vallen. In deze pathview (figuur 5) is te zien dat bij gezonde patiënten MHCI, PA28 en HSP70/90, in tegenstelling tot MHCII en IFNƴ , een hogere expressie tonen dan patiënten met RA.*Specifiek de T-cell receptoren(TCR) zijn afhankelijk van de antigen binding receptoren.*
 
 # Conclusie
 In de [Vulkaanplot](https://github.com/savvdzwld/casus-transcriptomics/blob/main/resultaten/Vulkaanplot.png) is te zien dat ANKRD30BL een van e significant veranderde genen is, kijkende naar het verschil tussen het humane genoom en de RA patiënten data. Bij de [Bias-analyse](https://github.com/savvdzwld/casus-transcriptomics/blob/main/resultaten/pwf.png) is te zien dat de data mogelijk biased is.
