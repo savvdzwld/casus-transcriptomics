@@ -27,13 +27,13 @@ kegg analyse verwijzing?[Script](https://github.com/savvdzwld/casus-transcriptom
 # Resultaten
 Om een diagnose te stellen zijn resultaten vereist, doormiddel van visualisatie zijn verschillen duidelijker zichtbaar.
 
-![Vulcanoplot](https://github.com/savvdzwld/casus-transcriptomics/blob/main/resultaten/Vulkaanplot.png)
+![Vulcanoplot](https://github.com/savvdzwld/casus-transcriptomics/blob/main/Resultaten/Vulcanoplot.png)
 
 *Figuur 2: Een vulkaanplot* 
 
 Met een vulkaanplot wordt gevisualiseerd hoeveel de genexpressie van specifieke genen significant verandert. Op de x-as de mate van verandering in expressie, en op de y-as de significantie van deze verandering. Hoe hoger de waarde,blauw gekleurd, des te significanter. ANKRD30BL in het groen is een van  de significante genen met veranderingen van beide, deze functies kunnen samenhangen. Van deze samenhang is een bias-analyse uitgevoerd in differentieel geëxprimeerd(DE) data.
 
-![Bias-analyse](https://github.com/savvdzwld/casus-transcriptomics/blob/main/resultaten/pwf.png)
+![Bias-analyse](https://github.com/savvdzwld/casus-transcriptomics/blob/main/Resultaten/bias-analyse.png)
 
 *Figuur 3: Bias-analyse* 
 
@@ -46,7 +46,7 @@ Het is van belang om de significante functies worden onderzocht, deze informatie
 
 Deze dotplot is een vorm van een go-analyse. Op de y-as staan de biologische functies en op de x-as de hoeveelheid genen die geassocieerd zijn met deze functie, hoe groter een punt, hoe meer genen er bijdragen aan deze functie. De kleur van deze punten toont de significantie. Er is te zien welke biologische functies verrijkt zijn in een set van genen. Door te weten welke invloed de functie antigen binding heeft kan er diagnose gesteld worden, en kan deze informatie worden gebruikt in nader onderzoek. 
 
-![KEGG-analyse](https://github.com/savvdzwld/casus-transcriptomics/blob/main/resultaten/hsa04612.pathview.png)
+![KEGG-analyse](https://github.com/savvdzwld/casus-transcriptomics/blob/main/Resultaten/KEGG-analyse-hsa04612.pathview.png)
 
 *Figuur 5: KEGG-analyse, waarbij controle tov RA* 
 
