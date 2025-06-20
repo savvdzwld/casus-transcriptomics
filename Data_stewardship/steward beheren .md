@@ -1,13 +1,4 @@
-*Dit is mijn steward beheren informatie*
-een effifciente en gestructureerde manier van beheren.
+In het werkveld wordt er gewerkt met patiëntmateriaal. Hier kan zich gevoelige informatie bevinden, informatie over medemensen. Waardoor het van belang is om belangrijk met deze dat om te gaan. Waaronder valt dat er gestructureerd wordt gewerkt, zodat er geen misinformatie wordt gedeeld, en zodat collega's die met de data verder gebruiken duidelijk alles is terug te vinden. Het is belangrijk dat de steward in staat is om data te verwerken, zodat dit later in het werkveld gebruikt kan worden. Doormiddel van het verwerken van data kunnen er diagnoses gesteld worden, wanneer dit niet goed beheerd wordt, kunnen er fouten diagnoses gesteld worden. Door mappen op alfabetische volgorde te bewaren, is het makkelijk doorzoekbaar. Tijdens het verwerken kunnen veel bestanden en resultaten vgemaakt worden, waardoor het handig is om dit te sorteren, zeker als sommige bestanden worden bewerkt, wilt men duidelijk weten welke bewerkt is en welke niet. Doordat er wordt gewerkt met een github pagina kunnen de bronnen anders worden verwerkt, aangezien er nu geen gebruik is gemaakt van een literatuurlijst. Wanneer een analyse wordt uitgevoerd, is het handig om dit bestand onder deze soort analyse naam op te slaan, zodat makkelijk terug te vinde is welke analyse het is, zeker als er wrodt verwezen naar resultaten. Als men het gebruikte script wil bekijken is het handig om een duidelijk overzichtelijk scipt te gebruiken, aangezien er dan makkelijker is terug te vinden hoe je iets hebt aangepakt. Door de data veilig op te slaan, onder een eventuele afgesloten map, zal er niet data verloren gaan, of in de verkeerde handen belanden. Er zijn verschillende platforms waarop je een script kan delen waaronder: E-mail, Discord, googleDrive en github. In dit geval is er gekozen voor gebruik van een github pagina aangezien er gestructureerd mee gewerkt wordt, en dit in het werkvak vaak wordt gebruikt. Met versiebeheer kunnen snelle aanpassingen gelijk voor de andere medelezers gelezen worden, zodat er niet opnieuw bestanden moeten worden gedeeld worden. In dit onderzoek is er gebruik gemaakt van R(vaak gebruikt in het vakjargon), voor data-analyses en door deze (on)verwerkte informatie op te slaan in een cloud, kan deze informatie niet zomaar gedeeld worden. Door  gebruik te maken van open data, kan dit gelezen, gedeeld en gecontroleerd worden, en evnuteel voor ander onderzoek gebruikt worden.
 
-beheen van data en het belnag hiervan en hoe je dat vorm kunt geven.
-waarom is dit een belangrijk onderdeel van onderzoek doen?
-Wat is een duidelijke mappenstructuur en waarom houd je dat aan?
-Wat is een handige manier voor de naamgeving van bestanden en waarom?
-Wat houdt versiebeheer in en waarom doe je dit?
-Hoe zorg je voor goede documentatie in scripts?
-wat voor platforms kan je gebruiken om scripts te delen?
-Welke tool gebruik je voor data-analyse, zoals bijvoorbeeld voor het veilig opslaan van data?
-Hoe zou jij omgaan met gevoelige of persoonlijke data?
-wat is het belang van open data en het publiceren van datasets?
+een efficiëntie en gestructureerde manier van beheren.
+
