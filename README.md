@@ -42,7 +42,7 @@ In figuur 3 is te zien dat de trendlijn oploopt, en later uitvlakt. Het is van b
 
 *Figuur 4: Dotplot van een GO-analyse waarbij op de y-as de biologische functies staan en op de x-as de hoeveelheid genen die geassocieerd zijn met deze functie, hoe groter een punt, hoe meer genen er bijdragen aan deze functie. De kleur van deze punten toont de significantie. Een hogere x-as waarde betekent meer gekoppelde genen uit de eigen data-set specifiek voor de geselecteerde data, aan deze functie.*
 
-Er is te zien dat de antigen binding functie verrijkt is, wat een significant verschil is. Het proces en de presentatie van deze functie is te visualiseren met een KEGG-analyse.
+Er is in figuur 4 te zien dat de antigen binding functie verrijkt is, wat een significant verschil is. Het proces en de presentatie van deze functie is te visualiseren met een KEGG-analyse.
 
 ![KEGG-analyse](https://github.com/savvdzwld/casus-transcriptomics/blob/main/Resultaten/KEGG-analyse-hsa04612.pathview.png)
 
